@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zhifu_ui/global_config.dart';
 import 'package:flutter_zhifu_ui/home/home_page.dart';
+import 'package:flutter_zhifu_ui/idea/idea_page.dart';
 import 'package:flutter_zhifu_ui/index/navigation_icon_view.dart';
+import 'package:flutter_zhifu_ui/market/market_page.dart';
 import 'package:flutter_zhifu_ui/my/my_page.dart';
+import 'package:flutter_zhifu_ui/notice/notice_page.dart';
 
 class Index extends StatefulWidget {
   @override
@@ -31,6 +34,10 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
           title: new Text('市场'),
           vsync: this),
       new NavigationIconView(
+          icon: new Icon(Icons.notifications),
+          title: new Text('通知'),
+          vsync: this),
+      new NavigationIconView(
           icon: new Icon(Icons.perm_identity),
           title: new Text('我的'),
           vsync: this)
@@ -41,8 +48,9 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
     }
     _pageList = <StatefulWidget>[
       new HomePage(),
-      new HomePage(),
-      new HomePage(),
+      new IdeaPage(),
+      new MarketPage(),
+      new NoticePage(),
       new MyPage()
     ];
     _currentPage = _pageList[_currentIndex];
