@@ -24,7 +24,7 @@ class _HomePage extends State<HomePage> {
                 new Tab(text: '推荐'),
                 new Tab(text: '热榜'),
               ],
-              labelColor: Colors.white,
+              labelColor: Colors.blue,
               unselectedLabelColor: Colors.black,
             ),
           ),
