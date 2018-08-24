@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/home/hot.dart';
+import 'package:flutter_zhifu_ui/home/follow/follow.dart';
+import 'package:flutter_zhifu_ui/home/hot/hot.dart';
+import 'package:flutter_zhifu_ui/home/recommend/recommend.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,8 +29,8 @@ class _HomePage extends State<HomePage> {
             ),
           ),
           body: new TabBarView(children: [
-            new Hot(),
-            new Hot(),
+            new Follow(),
+            new Recommend(),
             new Hot(),
           ]),
         ));

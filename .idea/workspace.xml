@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="071560e4-d62d-4aaa-b17e-106a171d6ec5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/idea/idea_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/market/market_page.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/notice/notice_page.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/home/hot/hot.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/home/recommend/recommend.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/index/index.dart" afterPath="$PROJECT_DIR$/lib/index/index.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/home/home_page.dart" afterPath="$PROJECT_DIR$/lib/home/home_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/home/hot.dart" afterPath="$PROJECT_DIR$/lib/home/follow/follow.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -24,11 +24,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/index/index.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state relative-caret-position="390">
+              <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recommend.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/home/recommend/recommend.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="follow.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/home/follow/follow.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_page.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/home/home_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -65,12 +97,14 @@
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/my/my_page.dart" />
         <option value="$PROJECT_DIR$/lib/global_config.dart" />
-        <option value="$PROJECT_DIR$/lib/home/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/home/hot.dart" />
         <option value="$PROJECT_DIR$/lib/idea/idea_page.dart" />
         <option value="$PROJECT_DIR$/lib/market/market_page.dart" />
         <option value="$PROJECT_DIR$/lib/notice/notice_page.dart" />
         <option value="$PROJECT_DIR$/lib/index/index.dart" />
+        <option value="$PROJECT_DIR$/lib/home/recommend/recommend.dart" />
+        <option value="$PROJECT_DIR$/lib/home/follow/follow.dart" />
+        <option value="$PROJECT_DIR$/lib/home/home_page.dart" />
       </list>
     </option>
   </component>
@@ -118,7 +152,28 @@
               <item name="flutter_zhifu_ui" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_zhifu_ui" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_zhifu_ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_zhifu_ui" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="follow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_zhifu_ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_zhifu_ui" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="hot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_zhifu_ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_zhifu_ui" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flutter_zhifu_ui" type="b2602c69:ProjectViewProjectNode" />
@@ -142,12 +197,15 @@
     <property name="io.flutter.reload.alreadyRun" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/home/hot" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/home/follow" />
+      <recent name="$PROJECT_DIR$/lib/home/recommend" />
       <recent name="$PROJECT_DIR$/lib/notice" />
       <recent name="$PROJECT_DIR$/lib/market" />
       <recent name="$PROJECT_DIR$/lib/idea" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,6 +322,14 @@
       <option name="presentableId" value="Default" />
       <updated>1535093572880</updated>
     </task>
+    <task id="LOCAL-00001" summary="新增通知">
+      <created>1535101475170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1535101475171</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -304,6 +370,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增通知" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增通知" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -381,21 +451,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home/hot.dart">
+    <entry file="file://$PROJECT_DIR$/lib/home/hot/hot.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home/home_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,11 +495,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/index/index.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+        <state relative-caret-position="390">
+          <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home/home_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home/follow/follow.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home/recommend/recommend.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
