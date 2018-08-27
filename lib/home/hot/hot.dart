@@ -113,7 +113,7 @@ class _Hot extends State<Hot> {
         child: new Column(
           children: <Widget>[
             new Container(
-              margin: const EdgeInsets.all(5.0),
+              margin: const EdgeInsets.only(top: 5.0),
             ),
             hotCard(questionList[0]),
             hotCard(questionList[1]),
