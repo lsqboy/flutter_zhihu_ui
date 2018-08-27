@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zhifu_ui/global_config.dart';
+import 'package:flutter_zhifu_ui/home/detail/question_page.dart';
 import 'package:flutter_zhifu_ui/home/model/question.dart';
 
 class Hot extends StatefulWidget {
@@ -23,7 +24,11 @@ class _Hot extends State<Hot> {
                         : Colors.black12,
                     width: 1.0))),
         child: new FlatButton(
-            onPressed: null,
+            onPressed: (){
+              Navigator.of(context).push(new MaterialPageRoute(builder: (context){
+                return new QuestionPage();
+              }));
+            },
             child: new Container(
               padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: new Row(

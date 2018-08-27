@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zhifu_ui/global_config.dart';
+import 'package:flutter_zhifu_ui/home/detail/reply_page.dart';
 import 'package:flutter_zhifu_ui/home/model/article.dart';
 import 'package:flutter_zhifu_ui/home/model/question.dart';
 import 'package:flutter_zhifu_ui/my/my_page.dart';
@@ -58,7 +59,7 @@ class _Recommend extends State<Recommend> {
             onPressed: () {
               Navigator
                   .of(context)
-                  .push(new MaterialPageRoute(builder: (context) {return new MyPage();}));
+                  .push(new MaterialPageRoute(builder: (context) {return new ReplyPage();}));
             },
             child: new Column(
               children: <Widget>[
