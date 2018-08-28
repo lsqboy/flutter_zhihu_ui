@@ -12,10 +12,11 @@ class _NoticePage extends State<NoticePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Notice'),
+        centerTitle: true,
+        title: new Text('通知'),
       ),
       body: new Center(
-        child: new Text('Notice Page'),
+        child: new Text('通知页面'),
       ),
     );
   }

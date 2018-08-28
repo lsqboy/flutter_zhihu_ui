@@ -12,10 +12,11 @@ class _MarketPage extends State<MarketPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Market'),
+        centerTitle: true,
+        title: new Text('市场'),
       ),
       body: new Center(
-        child: new Text('Market Page'),
+        child: new Text('市场页面'),
       ),
     );
   }

@@ -12,10 +12,11 @@ class _IdeaPage extends State<IdeaPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Idea'),
+        centerTitle: true,
+        title: new Text('想法'),
       ),
       body: new Center(
-        child: new Text('Idea Page'),
+        child: new Text('想法页面'),
       ),
     );
   }
