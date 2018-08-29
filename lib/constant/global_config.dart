@@ -16,4 +16,6 @@ class GlobalConfig {
   static Color cardBackgroundColor = Colors.white;
   static Color fontColor = Colors.black54;
   static bool dark = false;
+  
+  static const SP_COOKIE = "sp_cookie";
 }

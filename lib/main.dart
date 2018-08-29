@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/index/index.dart';
+import 'package:flutter_zhifu_ui/modules/index/index.dart';
 
 void main() => runApp(new ZhiHu());
 

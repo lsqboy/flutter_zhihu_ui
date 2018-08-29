@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/global_config.dart';
-import 'package:flutter_zhifu_ui/home/detail/reply_page.dart';
-import 'package:flutter_zhifu_ui/home/hot/hot.dart';
-import 'package:flutter_zhifu_ui/home/model/article.dart';
-import 'package:flutter_zhifu_ui/my/my_page.dart';
+import 'package:flutter_zhifu_ui/constant/global_config.dart';
+import 'package:flutter_zhifu_ui/modules/home/detail/reply_page.dart';
+import 'package:flutter_zhifu_ui/modules/home/model/article.dart';
 
 class Follow extends StatefulWidget {
   @override

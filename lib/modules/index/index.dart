@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/global_config.dart';
-import 'package:flutter_zhifu_ui/home/home_page.dart';
-import 'package:flutter_zhifu_ui/idea/idea_page.dart';
-import 'package:flutter_zhifu_ui/index/navigation_icon_view.dart';
-import 'package:flutter_zhifu_ui/market/market_page.dart';
-import 'package:flutter_zhifu_ui/my/my_page.dart';
-import 'package:flutter_zhifu_ui/notice/notice_page.dart';
+import 'package:flutter_zhifu_ui/constant/global_config.dart';
+import 'package:flutter_zhifu_ui/modules/home/home_page.dart';
+import 'package:flutter_zhifu_ui/modules/idea/idea_page.dart';
+import 'package:flutter_zhifu_ui/modules/index/navigation_icon_view.dart';
+import 'package:flutter_zhifu_ui/modules/market/market_page.dart';
+import 'package:flutter_zhifu_ui/modules/my/my_page.dart';
+import 'package:flutter_zhifu_ui/modules/notice/notice_page.dart';
 
 class Index extends StatefulWidget {
   @override

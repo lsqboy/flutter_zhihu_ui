@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/global_config.dart';
-import 'package:flutter_zhifu_ui/home/follow/follow.dart';
-import 'package:flutter_zhifu_ui/home/hot/hot.dart';
-import 'package:flutter_zhifu_ui/home/recommend/recommend.dart';
-import 'package:flutter_zhifu_ui/home/search/search_page.dart';
+import 'package:flutter_zhifu_ui/constant/global_config.dart';
+import 'package:flutter_zhifu_ui/modules/home/follow/follow.dart';
+import 'package:flutter_zhifu_ui/modules/home/hot/hot.dart';
+import 'package:flutter_zhifu_ui/modules/home/recommend/recommend.dart';
+import 'package:flutter_zhifu_ui/modules/home/search/search_page.dart';
 
 class HomePage extends StatefulWidget {
   @override

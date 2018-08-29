@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/global_config.dart';
+import 'package:flutter_zhifu_ui/constant/global_config.dart';
 
 class SearchPage extends StatefulWidget {
   @override
