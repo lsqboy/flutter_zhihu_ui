@@ -24,21 +24,21 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
   void initState() {
     _navigationViews = <NavigationIconView>[
       new NavigationIconView(
-          icon: new Icon(Icons.assessment), title: new Text('首页'), vsync: this),
+          icon: new Icon(Icons.home), title: new Text('首页'), vsync: this),
       new NavigationIconView(
-          icon: new Icon(Icons.all_inclusive),
-          title: new Text('想法'),
+          icon: new Icon(Icons.bookmark),
+          title: new Text('玩资讯'),
           vsync: this),
       new NavigationIconView(
-          icon: new Icon(Icons.add_shopping_cart),
-          title: new Text('市场'),
+          icon: new Icon(Icons.book),
+          title: new Text('知识体系'),
           vsync: this),
       new NavigationIconView(
           icon: new Icon(Icons.notifications),
           title: new Text('通知'),
           vsync: this),
       new NavigationIconView(
-          icon: new Icon(Icons.perm_identity),
+          icon: new Icon(Icons.person),
           title: new Text('我的'),
           vsync: this)
     ];

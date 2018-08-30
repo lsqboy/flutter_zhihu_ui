@@ -13,10 +13,10 @@ class _MarketPage extends State<MarketPage> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text('市场'),
+        title: new Text('知识体系'),
       ),
       body: new Center(
-        child: new Text('市场页面'),
+        child: new Text('知识体系页面'),
       ),
     );
   }
