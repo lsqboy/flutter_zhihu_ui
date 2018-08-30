@@ -9,7 +9,7 @@ class GlobalConfig {
 //  static Color cardBackgroundColor = new Color(0xFF222222);
 
   static ThemeData themeData = new ThemeData(
-    primaryColor: Colors.white,
+    primaryColor: Colors.blue,
     scaffoldBackgroundColor: new Color(0xFFEBEBEB),
   );
   static Color searchBackgroundColor = new Color(0xFFEBEBEB);
