@@ -1,6 +1,6 @@
 # flutter_zhifu_ui
 
-高仿知乎UI界面，flutter组件练手
+一个高仿知乎UI，使用玩AndroidApi数据等等完成的flutterAPP。高仿知乎UI界面，flutter组件练手必备。喜欢请star下。谢谢！！！
 
 ## Getting Started
 
