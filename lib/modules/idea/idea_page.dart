@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:banner_view/banner_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_zhifu_ui/constant/Urls.dart';
+import 'package:flutter_zhifu_ui/event/EventObject.dart';
+import 'package:flutter_zhifu_ui/event/EventUtils.dart';
 import 'package:flutter_zhifu_ui/http/HttpUtils.dart';
 import 'package:flutter_zhifu_ui/modules/idea/MyWebDetailPage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -62,6 +64,21 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
         getArticleData(true);
       }
     });
+
+    EventUtils.appEvent.on<EventObject>().listen((event){
+      if (this.mounted) {
+        if (event.key == EventUtils.EVENT_LOGIN) {
+          // 登录成功  刷新下列表吧
+          getArticleData(false);
+          print("玩资讯：登录成功");
+        }else if(event.key == EventUtils.EVENT_LOGOUT){
+          // 退出登录  也刷新下列表吧  别想到其他的动作现在
+          getArticleData(false);
+          print("玩资讯：退出登录成功");
+        }
+      }
+    });
+
     _refresh();
     super.initState();
   }
