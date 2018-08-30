@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GlobalConfig {
+class Config {
 //  static bool dark = true;
 //  static ThemeData themeData = new ThemeData.light();
 //

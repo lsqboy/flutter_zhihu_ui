@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
-import 'package:flutter_zhifu_ui/modules/home/home_page.dart';
-import 'package:flutter_zhifu_ui/modules/idea/idea_page.dart';
-import 'package:flutter_zhifu_ui/modules/index/navigation_icon_view.dart';
-import 'package:flutter_zhifu_ui/modules/market/market_page.dart';
-import 'package:flutter_zhifu_ui/modules/my/my_page.dart';
-import 'package:flutter_zhifu_ui/modules/notice/notice_page.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/modules/article/ArticlePage.dart';
+import 'package:flutter_zhifu_ui/modules/home/HomePage.dart';
+import 'package:flutter_zhifu_ui/modules/index/NavigationIconView.dart';
+import 'package:flutter_zhifu_ui/modules/knowledge/KnowledgePage.dart';
+import 'package:flutter_zhifu_ui/modules/my/MyPage.dart';
+import 'package:flutter_zhifu_ui/modules/notice/NoticePage.dart';
 
-class Index extends StatefulWidget {
+class IndexPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _IndexState();
+    return new _IndexPageState();
   }
 }
 
-class _IndexState extends State<Index> with TickerProviderStateMixin {
+class _IndexPageState extends State<IndexPage> with TickerProviderStateMixin {
   int _currentIndex = 0;
   List<NavigationIconView> _navigationViews;
   List<StatefulWidget> _pageList;
@@ -48,8 +48,8 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
     }
     _pageList = <StatefulWidget>[
       new HomePage(),
-      new IdeaPage(),
-      new MarketPage(),
+      new ArticlePage(),
+      new KnowledgePage(),
       new NoticePage(),
       new MyPage()
     ];
@@ -82,7 +82,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin {
         body: new Center(child: _currentPage,),
         bottomNavigationBar: bottomNavigationBar,
       ),
-      theme: GlobalConfig.themeData,
+      theme: Config.themeData,
     );
   }
 

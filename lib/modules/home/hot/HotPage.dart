@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
-import 'package:flutter_zhifu_ui/modules/home/detail/question_page.dart';
-import 'package:flutter_zhifu_ui/modules/home/model/question.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/modules/home/detail/QuestionPage.dart';
+import 'package:flutter_zhifu_ui/modules/home/model/QuestionModel.dart';
 
-class Hot extends StatefulWidget {
+class HotPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _Hot();
+    return new _HotPage();
   }
 }
 
-class _Hot extends State<Hot> {
+class _HotPage extends State<HotPage> {
   @override
   Widget build(BuildContext context) {
-    Widget hotCard(Question question) {
+    Widget hotCard(QuestionModel question) {
       return new Container(
         decoration: new BoxDecoration(
-            color: GlobalConfig.cardBackgroundColor,
+            color: Config.cardBackgroundColor,
             border: new BorderDirectional(
                 bottom: new BorderSide(
-                    color: GlobalConfig.dark == true
+                    color: Config.dark == true
                         ? Colors.white12
                         : Colors.black12,
                     width: 1.0))),
@@ -73,19 +73,19 @@ class _Hot extends State<Hot> {
                       children: <Widget>[
                         new Container(
                           child: new Text(question.title,
-                          style: new TextStyle(color: GlobalConfig.dark == true ? Colors.white70 : Colors.black,
+                          style: new TextStyle(color: Config.dark == true ? Colors.white70 : Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16.0,height: 1.1),),
                           padding: const EdgeInsets.only(bottom: 10.0,right: 4.0),
                           alignment: Alignment.topLeft,
                         ),
                         question.mark !=null?new Container(
-                          child: new Text(question.mark,style: new TextStyle(color: GlobalConfig.fontColor)),
+                          child: new Text(question.mark,style: new TextStyle(color: Config.fontColor)),
                           padding: const EdgeInsets.only(bottom: 8.0,right: 4.0),
                           alignment: Alignment.topLeft,
                         ):new Container(),
                         new Container(
-                          child: new Text(question.hotNum,style: new TextStyle(color: GlobalConfig.fontColor),),
+                          child: new Text(question.hotNum,style: new TextStyle(color: Config.fontColor),),
                           alignment: Alignment.topLeft,
                         )
 

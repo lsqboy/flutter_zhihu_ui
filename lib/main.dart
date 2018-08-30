@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/modules/index/index.dart';
+import 'package:flutter_zhifu_ui/constant/AppConstant.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/modules/index/IndexPage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(new ZhiHu());
+void main() {
+  SharedPreferences.getInstance().then((prefs) {
+    AppConstant.APP_COOKIE = prefs.getString(Config.SP_COOKIE);
+  });
+  runApp(new ZhiHu());
+}
 
 class ZhiHu extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: '知乎-高仿版',
-      home: new Index(),
+      title: "知乎玩安卓",
+      home: new IndexPage(),
     );
   }
 }
-

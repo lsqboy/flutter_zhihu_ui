@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class _SearchPage extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      theme: GlobalConfig.themeData,
+      theme: Config.themeData,
       home: new Scaffold(
         appBar: new AppBar(
           title: searchInput(),
@@ -37,9 +37,9 @@ class _SearchPage extends State<SearchPage> {
                           onPressed: () {},
                           child: new Text(
                             "汽车关税下调",
-                            style: new TextStyle(color: GlobalConfig.fontColor),
+                            style: new TextStyle(color: Config.fontColor),
                           )),
-                      backgroundColor: GlobalConfig.dark == true
+                      backgroundColor: Config.dark == true
                           ? Colors.white10
                           : Colors.black12,
                     ),
@@ -52,10 +52,10 @@ class _SearchPage extends State<SearchPage> {
                         onPressed: () {},
                         child: new Text(
                           "李彦宏传闻辟谣",
-                          style: new TextStyle(color: GlobalConfig.fontColor),
+                          style: new TextStyle(color: Config.fontColor),
                         ),
                       ),
-                      backgroundColor: GlobalConfig.dark == true
+                      backgroundColor: Config.dark == true
                           ? Colors.white10
                           : Colors.black12,
                     ),
@@ -72,7 +72,7 @@ class _SearchPage extends State<SearchPage> {
                           onPressed: () {},
                           child: new Text(
                             "小米8",
-                            style: new TextStyle(color: GlobalConfig.fontColor),
+                            style: new TextStyle(color: Config.fontColor),
                           )),
                       backgroundColor: Colors.black12,
                     ),
@@ -84,7 +84,7 @@ class _SearchPage extends State<SearchPage> {
                           onPressed: () {},
                           child: new Text(
                             "超时空同居",
-                            style: new TextStyle(color: GlobalConfig.fontColor),
+                            style: new TextStyle(color: Config.fontColor),
                           )),
                       backgroundColor: Colors.black12,
                     ),
@@ -106,7 +106,7 @@ class _SearchPage extends State<SearchPage> {
                   children: <Widget>[
                     new Container(
                       child: new Icon(Icons.access_time,
-                          color: GlobalConfig.fontColor, size: 16.0),
+                          color: Config.fontColor, size: 16.0),
                       margin: const EdgeInsets.only(right: 12.0),
                     ),
                     new Expanded(
@@ -114,13 +114,13 @@ class _SearchPage extends State<SearchPage> {
                         child: new Text(
                           "业余兴趣",
                           style: new TextStyle(
-                              color: GlobalConfig.fontColor, fontSize: 14.0),
+                              color: Config.fontColor, fontSize: 14.0),
                         ),
                       ),
                     ),
                     new Container(
                       child: new Icon(Icons.clear,
-                          color: GlobalConfig.fontColor, size: 16.0),
+                          color: Config.fontColor, size: 16.0),
                     )
                   ],
                 ),
@@ -130,7 +130,7 @@ class _SearchPage extends State<SearchPage> {
                 decoration: new BoxDecoration(
                     border: new BorderDirectional(
                         bottom: new BorderSide(
-                            color: GlobalConfig.dark == true
+                            color: Config.dark == true
                                 ? Colors.white12
                                 : Colors.black12))),
               ),
@@ -139,7 +139,7 @@ class _SearchPage extends State<SearchPage> {
                   children: <Widget>[
                     new Container(
                       child: new Icon(Icons.access_time,
-                          color: GlobalConfig.fontColor, size: 16.0),
+                          color: Config.fontColor, size: 16.0),
                       margin: const EdgeInsets.only(right: 12.0),
                     ),
                     new Expanded(
@@ -147,13 +147,13 @@ class _SearchPage extends State<SearchPage> {
                         child: new Text(
                           "三体",
                           style: new TextStyle(
-                              color: GlobalConfig.fontColor, fontSize: 14.0),
+                              color: Config.fontColor, fontSize: 14.0),
                         ),
                       ),
                     ),
                     new Container(
                       child: new Icon(Icons.clear,
-                          color: GlobalConfig.fontColor, size: 16.0),
+                          color: Config.fontColor, size: 16.0),
                     )
                   ],
                 ),
@@ -162,7 +162,7 @@ class _SearchPage extends State<SearchPage> {
                 decoration: new BoxDecoration(
                     border: new BorderDirectional(
                         bottom: new BorderSide(
-                            color: GlobalConfig.dark == true
+                            color: Config.dark == true
                                 ? Colors.white12
                                 : Colors.black12))),
               ),
@@ -171,7 +171,7 @@ class _SearchPage extends State<SearchPage> {
                   children: <Widget>[
                     new Container(
                       child: new Icon(Icons.access_time,
-                          color: GlobalConfig.fontColor, size: 16.0),
+                          color: Config.fontColor, size: 16.0),
                       margin: const EdgeInsets.only(right: 12.0),
                     ),
                     new Expanded(
@@ -179,13 +179,13 @@ class _SearchPage extends State<SearchPage> {
                         child: new Text(
                           "人类未来",
                           style: new TextStyle(
-                              color: GlobalConfig.fontColor, fontSize: 14.0),
+                              color: Config.fontColor, fontSize: 14.0),
                         ),
                       ),
                     ),
                     new Container(
                       child: new Icon(Icons.clear,
-                          color: GlobalConfig.fontColor, size: 16.0),
+                          color: Config.fontColor, size: 16.0),
                     )
                   ],
                 ),
@@ -194,7 +194,7 @@ class _SearchPage extends State<SearchPage> {
                 decoration: new BoxDecoration(
                     border: new BorderDirectional(
                         bottom: new BorderSide(
-                            color: GlobalConfig.dark == true
+                            color: Config.dark == true
                                 ? Colors.white12
                                 : Colors.black12))),
               ),
@@ -216,7 +216,7 @@ class _SearchPage extends State<SearchPage> {
                 },
                 icon: new Icon(
                   Icons.arrow_back,
-                  color: GlobalConfig.fontColor,
+                  color: Config.fontColor,
                   size: 18.0,
                 ),
                 label: new Text("")),
@@ -227,12 +227,12 @@ class _SearchPage extends State<SearchPage> {
             autofocus: false,
             decoration: new InputDecoration.collapsed(
                 hintText: "搜索知乎内容",
-                hintStyle: new TextStyle(color: GlobalConfig.fontColor)),
+                hintStyle: new TextStyle(color: Config.fontColor)),
           ))
         ],
       ),
       decoration: new BoxDecoration(
-          color: GlobalConfig.searchBackgroundColor,
+          color: Config.searchBackgroundColor,
           borderRadius: const BorderRadius.all(const Radius.circular(4.0))),
     );
   }

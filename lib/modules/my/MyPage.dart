@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
 
 class MyPage extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class _MyPage extends State<MyPage> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      theme: GlobalConfig.themeData,
+      theme: Config.themeData,
       home: new Scaffold(
         appBar: new AppBar(
           title: barSearch(),
@@ -58,7 +58,7 @@ class _MyPage extends State<MyPage> {
           )),
       decoration: new BoxDecoration(
           borderRadius: const BorderRadius.all(const Radius.circular(4.0)),
-          color: GlobalConfig.searchBackgroundColor),
+          color: Config.searchBackgroundColor),
     );
   }
 
@@ -103,7 +103,7 @@ class _MyPage extends State<MyPage> {
                                 "57",
                                 style: new TextStyle(
                                     fontSize: 16.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             ),
                             new Container(
@@ -111,7 +111,7 @@ class _MyPage extends State<MyPage> {
                                 "我的创作",
                                 style: new TextStyle(
                                     fontSize: 12.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             )
                           ],
@@ -140,7 +140,7 @@ class _MyPage extends State<MyPage> {
                                 "210",
                                 style: new TextStyle(
                                     fontSize: 16.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             ),
                             new Container(
@@ -148,7 +148,7 @@ class _MyPage extends State<MyPage> {
                                 "关注",
                                 style: new TextStyle(
                                     fontSize: 12.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             )
                           ],
@@ -177,7 +177,7 @@ class _MyPage extends State<MyPage> {
                                 "18",
                                 style: new TextStyle(
                                     fontSize: 16.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             ),
                             new Container(
@@ -185,7 +185,7 @@ class _MyPage extends State<MyPage> {
                                 "我的收藏",
                                 style: new TextStyle(
                                     fontSize: 12.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             )
                           ],
@@ -214,7 +214,7 @@ class _MyPage extends State<MyPage> {
                                 "33",
                                 style: new TextStyle(
                                     fontSize: 16.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             ),
                             new Container(
@@ -222,7 +222,7 @@ class _MyPage extends State<MyPage> {
                                 "最近浏览",
                                 style: new TextStyle(
                                     fontSize: 12.0,
-                                    color: GlobalConfig.fontColor),
+                                    color: Config.fontColor),
                               ),
                             )
                           ],
@@ -234,7 +234,7 @@ class _MyPage extends State<MyPage> {
           )
         ],
       ),
-      color: GlobalConfig.cardBackgroundColor,
+      color: Config.cardBackgroundColor,
       margin: const EdgeInsets.only(top: 10.0, bottom: 6.0),
       padding: const EdgeInsets.only(top: 12.0, bottom: 8.0),
     );
@@ -242,7 +242,7 @@ class _MyPage extends State<MyPage> {
 
   Widget myServiceCard() {
     return new Container(
-      color: GlobalConfig.cardBackgroundColor,
+      color: Config.cardBackgroundColor,
       margin: const EdgeInsets.only(top: 6.0, bottom: 6.0),
       padding: const EdgeInsets.only(top: 12.0, bottom: 8.0),
       child: new Column(
@@ -273,7 +273,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "我的书架",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -303,7 +303,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "我的live",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -333,7 +333,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "私家课",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -363,7 +363,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "付费咨询",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -400,7 +400,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "已购",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -430,7 +430,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "余额礼券",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -460,7 +460,7 @@ class _MyPage extends State<MyPage> {
                               child: new Text(
                                 "服务",
                                 style: new TextStyle(
-                                    color: GlobalConfig.fontColor,
+                                    color: Config.fontColor,
                                     fontSize: 14.0),
                               ),
                             )
@@ -482,7 +482,7 @@ class _MyPage extends State<MyPage> {
       margin: const EdgeInsets.only(top: 6.0, bottom: 8.0),
       padding: const EdgeInsets.only(top: 16.0, bottom: 8.0),
       decoration: new BoxDecoration(
-        color: GlobalConfig.cardBackgroundColor,
+        color: Config.cardBackgroundColor,
       ),
       child: new Container(
         child: new Row(
@@ -510,7 +510,7 @@ class _MyPage extends State<MyPage> {
                           child: new Text(
                             "社区建设",
                             style: new TextStyle(
-                                color: GlobalConfig.fontColor, fontSize: 14.0),
+                                color: Config.fontColor, fontSize: 14.0),
                           ),
                         )
                       ],
@@ -539,7 +539,7 @@ class _MyPage extends State<MyPage> {
                           child: new Text(
                             "反馈",
                             style: new TextStyle(
-                                color: GlobalConfig.fontColor, fontSize: 14.0),
+                                color: Config.fontColor, fontSize: 14.0),
                           ),
                         )
                       ],
@@ -568,7 +568,7 @@ class _MyPage extends State<MyPage> {
                           child: new Text(
                             "日间模式",
                             style: new TextStyle(
-                                color: GlobalConfig.fontColor, fontSize: 14.0),
+                                color: Config.fontColor, fontSize: 14.0),
                           ),
                         )
                       ],
@@ -597,7 +597,7 @@ class _MyPage extends State<MyPage> {
                           child: new Text(
                             "设置",
                             style: new TextStyle(
-                                color: GlobalConfig.fontColor, fontSize: 14.0),
+                                color: Config.fontColor, fontSize: 14.0),
                           ),
                         )
                       ],
@@ -612,7 +612,7 @@ class _MyPage extends State<MyPage> {
 
   Widget videoCard() {
     return new Container(
-      color: GlobalConfig.cardBackgroundColor,
+      color: Config.cardBackgroundColor,
       margin: const EdgeInsets.only(top: 6.0, bottom: 8.0),
       padding: const EdgeInsets.only(top: 12.0, bottom: 16.0),
       child: new Column(
@@ -708,7 +708,7 @@ class _MyPage extends State<MyPage> {
 
   Widget ideaCard() {
     return new Container(
-        color: GlobalConfig.cardBackgroundColor,
+        color: Config.cardBackgroundColor,
         margin: const EdgeInsets.only(top: 6.0, bottom: 6.0),
         padding: const EdgeInsets.only(top: 12.0, bottom: 8.0),
         child: new Column(
@@ -748,7 +748,7 @@ class _MyPage extends State<MyPage> {
                     new Container(
                         margin: const EdgeInsets.only(right: 6.0),
                         decoration: new BoxDecoration(
-                            color: GlobalConfig.searchBackgroundColor,
+                            color: Config.searchBackgroundColor,
                             borderRadius: new BorderRadius.all(new Radius.circular(6.0))
                         ),
                         child: new Row(
@@ -760,14 +760,14 @@ class _MyPage extends State<MyPage> {
                                   new Align(
                                     alignment: Alignment.centerLeft,
                                     child: new Container(
-                                      child: new Text("苹果 WWDC 2018 正在举行", style: new TextStyle(color: GlobalConfig.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
+                                      child: new Text("苹果 WWDC 2018 正在举行", style: new TextStyle(color: Config.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
                                     ),
                                   ),
                                   new Align(
                                       alignment: Alignment.centerLeft,
                                       child: new Container(
                                         margin: const EdgeInsets.only(top: 6.0),
-                                        child: new Text("软件更新意料之中，硬件之谜...", style: new TextStyle(color: GlobalConfig.fontColor),),
+                                        child: new Text("软件更新意料之中，硬件之谜...", style: new TextStyle(color: Config.fontColor),),
                                       )
                                   )
 
@@ -796,7 +796,7 @@ class _MyPage extends State<MyPage> {
                     new Container(
                         margin: const EdgeInsets.only(right: 6.0),
                         decoration: new BoxDecoration(
-                            color: GlobalConfig.searchBackgroundColor,
+                            color: Config.searchBackgroundColor,
                             borderRadius: new BorderRadius.all(new Radius.circular(6.0))
                         ),
                         child: new Row(
@@ -808,14 +808,14 @@ class _MyPage extends State<MyPage> {
                                   new Align(
                                     alignment: Alignment.centerLeft,
                                     child: new Container(
-                                      child: new Text("此刻你的桌子是什么样子？", style: new TextStyle(color: GlobalConfig.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
+                                      child: new Text("此刻你的桌子是什么样子？", style: new TextStyle(color: Config.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
                                     ),
                                   ),
                                   new Align(
                                       alignment: Alignment.centerLeft,
                                       child: new Container(
                                         margin: const EdgeInsets.only(top: 6.0),
-                                        child: new Text("晒一晒你的书桌/办公桌", style: new TextStyle(color: GlobalConfig.fontColor),),
+                                        child: new Text("晒一晒你的书桌/办公桌", style: new TextStyle(color: Config.fontColor),),
                                       )
                                   )
 
@@ -844,7 +844,7 @@ class _MyPage extends State<MyPage> {
                     new Container(
                         margin: const EdgeInsets.only(right: 6.0),
                         decoration: new BoxDecoration(
-                            color: GlobalConfig.searchBackgroundColor,
+                            color: Config.searchBackgroundColor,
                             borderRadius: new BorderRadius.all(new Radius.circular(6.0))
                         ),
                         child: new Row(
@@ -856,14 +856,14 @@ class _MyPage extends State<MyPage> {
                                   new Align(
                                     alignment: Alignment.centerLeft,
                                     child: new Container(
-                                      child: new Text("关于高考你印象最深的是...", style: new TextStyle(color: GlobalConfig.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
+                                      child: new Text("关于高考你印象最深的是...", style: new TextStyle(color: Config.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
                                     ),
                                   ),
                                   new Align(
                                       alignment: Alignment.centerLeft,
                                       child: new Container(
                                         margin: const EdgeInsets.only(top: 6.0),
-                                        child: new Text("聊聊你的高三生活", style: new TextStyle(color: GlobalConfig.fontColor),),
+                                        child: new Text("聊聊你的高三生活", style: new TextStyle(color: Config.fontColor),),
                                       )
                                   )
 
@@ -892,7 +892,7 @@ class _MyPage extends State<MyPage> {
                     new Container(
                         margin: const EdgeInsets.only(right: 6.0),
                         decoration: new BoxDecoration(
-                            color: GlobalConfig.searchBackgroundColor,
+                            color: Config.searchBackgroundColor,
                             borderRadius: new BorderRadius.all(new Radius.circular(6.0))
                         ),
                         child: new Row(
@@ -904,14 +904,14 @@ class _MyPage extends State<MyPage> {
                                   new Align(
                                     alignment: Alignment.centerLeft,
                                     child: new Container(
-                                      child: new Text("夏天一定要吃的食物有哪些", style: new TextStyle(color: GlobalConfig.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
+                                      child: new Text("夏天一定要吃的食物有哪些", style: new TextStyle(color: Config.dark == true? Colors.white70 : Colors.black, fontSize: 16.0),),
                                     ),
                                   ),
                                   new Align(
                                       alignment: Alignment.centerLeft,
                                       child: new Container(
                                         margin: const EdgeInsets.only(top: 6.0),
-                                        child: new Text("最适合夏天吃的那种", style: new TextStyle(color: GlobalConfig.fontColor),),
+                                        child: new Text("最适合夏天吃的那种", style: new TextStyle(color: Config.fontColor),),
                                       )
                                   )
 

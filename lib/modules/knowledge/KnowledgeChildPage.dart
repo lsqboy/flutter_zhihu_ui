@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/modules/market/KnowledgeChildListPage.dart';
+import 'package:flutter_zhifu_ui/modules/knowledge/KnowledgeChildListPage.dart';
 
 /// tab数据从外面传入。知识体系的二级页面
 class KnowledgeChildPage extends StatefulWidget {

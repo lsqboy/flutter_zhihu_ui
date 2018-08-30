@@ -6,18 +6,17 @@ import 'package:flutter_zhifu_ui/constant/Urls.dart';
 import 'package:flutter_zhifu_ui/event/EventObject.dart';
 import 'package:flutter_zhifu_ui/event/EventUtils.dart';
 import 'package:flutter_zhifu_ui/http/HttpUtils.dart';
-import 'package:flutter_zhifu_ui/modules/idea/MyWebDetailPage.dart';
-import 'package:flutter_zhifu_ui/modules/market/KnowledgeChildPage.dart';
+import 'package:flutter_zhifu_ui/modules/knowledge/KnowledgeChildPage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class MarketPage extends StatefulWidget {
+class KnowledgePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _MarketPage();
+    return new _KnowledgePage();
   }
 }
 
-class _MarketPage extends State<MarketPage> with AutomaticKeepAliveClientMixin {
+class _KnowledgePage extends State<KnowledgePage> with AutomaticKeepAliveClientMixin {
   /// 获取到的文章列表数据集合。给ListView构建Item时使用。
   List _treeData = List();
 
@@ -54,7 +53,7 @@ class _MarketPage extends State<MarketPage> with AutomaticKeepAliveClientMixin {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text('知识体系'),
+        title: new Text("知识体系"),
       ),
       body: _treeData.length == 0
           ? new Center(

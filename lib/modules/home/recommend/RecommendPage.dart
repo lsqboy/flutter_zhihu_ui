@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
-import 'package:flutter_zhifu_ui/modules/home/detail/reply_page.dart';
-import 'package:flutter_zhifu_ui/modules/home/model/article.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/modules/home/detail/ReplyPage.dart';
+import 'package:flutter_zhifu_ui/modules/home/model/ArticleModel.dart';
 
-class Recommend extends StatefulWidget {
+class RecommendPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _Recommend();
+    return new _RecommendPage();
   }
 }
 
-class _Recommend extends State<Recommend> {
+class _RecommendPage extends State<RecommendPage> {
   @override
   Widget build(BuildContext context) {
-    Widget wordsCard(Article article) {
+    Widget wordsCard(ArticleModel article) {
       Widget markWidget;
       if (article.imgUrl == null) {
         markWidget = new Text(
           article.mark,
-          style: new TextStyle(height: 1.3, color: GlobalConfig.fontColor),
+          style: new TextStyle(height: 1.3, color: Config.fontColor),
         );
       } else {
         markWidget = new Row(
@@ -28,7 +28,7 @@ class _Recommend extends State<Recommend> {
                 child: new Text(
                   article.title,
                   style:
-                  new TextStyle(height: 1.3, color: GlobalConfig.fontColor),
+                  new TextStyle(height: 1.3, color: Config.fontColor),
                 ),
               ),
               flex: 2,
@@ -51,7 +51,7 @@ class _Recommend extends State<Recommend> {
         );
       }
       return new Container(
-        color: GlobalConfig.cardBackgroundColor,
+        color: Config.cardBackgroundColor,
         margin: const EdgeInsets.only(top: 5.0, bottom: 5.0),
         child: new FlatButton(
             onPressed: () {
@@ -77,7 +77,7 @@ class _Recommend extends State<Recommend> {
                             article.action +
                             " · " +
                             article.time,
-                        style: new TextStyle(color: GlobalConfig.fontColor),
+                        style: new TextStyle(color: Config.fontColor),
                       )
                     ],
                   ),
@@ -90,7 +90,7 @@ class _Recommend extends State<Recommend> {
                         fontWeight: FontWeight.bold,
                         fontSize: 16.0,
                         height: 1.3,
-                        color: GlobalConfig.dark == true
+                        color: Config.dark == true
                             ? Colors.white70
                             : Colors.black),
                   ),
@@ -111,7 +111,7 @@ class _Recommend extends State<Recommend> {
                                     " 赞同 · " +
                                     article.commentNum.toString() +
                                     "评论",
-                                style: new TextStyle(color: GlobalConfig.fontColor))),
+                                style: new TextStyle(color: Config.fontColor))),
                         new PopupMenuButton(
                             itemBuilder: (BuildContext context) =>
                             <PopupMenuItem<String>>[

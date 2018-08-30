@@ -1,34 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_zhifu_ui/constant/Urls.dart';
+import 'package:flutter_zhifu_ui/http/HttpUtils.dart';
+import 'package:flutter_zhifu_ui/modules/article/WebDetailPage.dart';
 import 'dart:async';
 import 'dart:convert';
-
-import 'package:flutter/material.dart';
-import 'package:banner_view/banner_view.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_zhifu_ui/constant/Urls.dart';
-import 'package:flutter_zhifu_ui/event/EventObject.dart';
-import 'package:flutter_zhifu_ui/event/EventUtils.dart';
-import 'package:flutter_zhifu_ui/http/HttpUtils.dart';
-import 'package:flutter_zhifu_ui/modules/idea/MyWebDetailPage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class IdeaPage extends StatefulWidget {
+/// 通过传入的id 获取这个分类的文章列表。
+class KnowledgeChildListPage extends StatefulWidget {
+  final _id;
+
+  KnowledgeChildListPage(this._id);
+
   @override
-  State<StatefulWidget> createState() {
-    return new _IdeaPage();
-  }
+  State<StatefulWidget> createState() => KnowledgeChildListPageState(_id);
 }
 
-class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
+class KnowledgeChildListPageState extends State<KnowledgeChildListPage>
+    with AutomaticKeepAliveClientMixin {
+  final _id;
+
+  KnowledgeChildListPageState(this._id);
+
   /// 列表用的滑动监听控制器。这里可以点进去看看它里面有哪些参数和方法。
   ScrollController _scrollController = ScrollController();
 
   /// 给Snack用的。
   final GlobalKey<ScaffoldState> _scaffoldState = GlobalKey();
-
-  /// banner的数据。
-  var _bannerData;
-  List<Widget> _bannerWidget = new List();
-  Widget _banner;
 
   /// 获取到的文章列表数据集合。给ListView构建Item时使用。
   List _articleData = List();
@@ -42,13 +40,13 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
   /// 标志当前在请求中。
   var _isRequesting = false;
 
-  /// 下拉刷新动作，这里需要看下文档
+  /// 下拉刷新动作
   Future<Null> _refresh() async {
-    getBannerData();
     getArticleData(false);
     return null;
   }
 
+  /// 这个东西能让它在切换时不给销毁掉。
   @override
   bool get wantKeepAlive => true;
 
@@ -64,95 +62,32 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
         getArticleData(true);
       }
     });
-
-    EventUtils.appEvent.on<EventObject>().listen((event){
-      if (this.mounted) {
-        if (event.key == EventUtils.EVENT_LOGIN) {
-          // 登录成功  刷新下列表吧
-          getArticleData(false);
-          print("玩资讯：登录成功");
-        }else if(event.key == EventUtils.EVENT_LOGOUT){
-          // 退出登录  也刷新下列表吧  别想到其他的动作现在
-          getArticleData(false);
-          print("玩资讯：退出登录成功");
-        }
-      }
-    });
-
     _refresh();
     super.initState();
   }
 
   @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        centerTitle: true,
-        title: new Text('玩资讯'),
-      ),
-      key: _scaffoldState,
-      body: _articleData.length == 0
-          ? Center(
-              child: CircularProgressIndicator(
-                valueColor:
-                    AlwaysStoppedAnimation(Theme.of(context).primaryColor),
-              ),
-            )
-          : RefreshIndicator(
-              child: ListView.builder(
-                itemBuilder: (context, index) => getListViewItemWidget(index),
-                itemCount: _articleData.length + 1,
-                controller: _scrollController,
-              ),
-              onRefresh: _refresh),
-    );
-  }
-
-  void getBannerData() {
-    HttpUtils.get(Urls.HOME_BANNER_DATA).then((response) {
-      if (response != null && response.isNotEmpty) {
-        Map<String, dynamic> resultMap = jsonDecode(response);
-        var data = resultMap["data"];
-        if (data != null && resultMap["errorCode"] == 0) {
-          setState(() {
-            _bannerData = data;
-            for (var value in _bannerData) {
-              _bannerWidget.add(new Container(
-                child: new GestureDetector(
-                  onTap: (){
-                    Navigator.of(context).push(new MaterialPageRoute(builder: (context){
-                      return MyWebDetailPage(value["title"],value["url"]);
-                    }));
-                  },
-                  child: CachedNetworkImage(
-                    imageUrl: value["imagePath"],
-                    width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.cover,
-                  ),
-                )
-              ));
-            }
-            _banner = new Container(
-              alignment: Alignment.center,
-              height: 200.0,
-              child: new BannerView(
-                _bannerWidget,
-                intervalDuration: new Duration(seconds: 5),
-              ),
-            );
-          });
-        }
-      }
-    });
-  }
+  Widget build(BuildContext context) => Scaffold(
+        key: _scaffoldState,
+        body: _articleData.length == 0
+            ? Center(
+                child: CircularProgressIndicator(
+                  valueColor:
+                      AlwaysStoppedAnimation(Theme.of(context).primaryColor),
+                ),
+              )
+            : RefreshIndicator(
+                child: ListView.builder(
+                  itemBuilder: (context, index) => getListViewItemWidget(index),
+                  itemCount: _articleData.length,
+                  controller: _scrollController,
+                ),
+                onRefresh: _refresh),
+      );
 
   /// 构建 item
   getListViewItemWidget(int index) {
-    if (index == 0) {
-      // 这个是banner
-      return _banner;
-    }
-    var item = _articleData[index - 1];
+    var item = _articleData[index];
     // 其他的是列表的数据了。 这样写的好难看，看来得把代码多的这些部分移动到另一个文件去写了。
     return Card(
       margin: EdgeInsets.all(8.0),
@@ -169,7 +104,7 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
           // 打开web页面
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) =>
-                  MyWebDetailPage(item["title"], item["link"])));
+                  WebDetailPage(item["title"], item["link"])));
         },
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -227,7 +162,7 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
                           .of(context)
                           .showSnackBar(SnackBar(content: Text("收藏我哦")));
                       // 收藏或者取消收藏
-//                      dealWithArticleCollectStatus(index - 1, item["collect"]);
+//                      dealWithArticleCollectStatus(index, item["collect"]);
                     },
                     child: Image.asset(
                       item["collect"]
@@ -254,12 +189,14 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
       _curPager = 0;
     }
     // 拼接url
-    var articleUrl = "${Urls.ARTICLE_LIST}$_curPager/json";
+    var articleUrl = "${Urls.KNOWLEDGE_PROJECT_LIST}$_curPager/json";
     // 开始请求  来一个请求中的值吧。
     setState(() {
       _isRequesting = true;
     });
-    HttpUtils.get(articleUrl).then((response) {
+    var params = Map<String, String>();
+    params["cid"] = "$_id";
+    HttpUtils.get(articleUrl, params: params).then((response) {
       // 请求完成后设置这个值的状态
       _isRequesting = false;
       // 拿到结果后解析数据吧。
@@ -297,6 +234,75 @@ class _IdeaPage extends State<IdeaPage> with AutomaticKeepAliveClientMixin{
               bgcolor: "#99000000",
               textcolor: '#ffffff');
         }
+      }
+    });
+  }
+
+  /// 处理收藏或者取消收藏文章
+  void dealWithArticleCollectStatus(int index, bool collectStatus) {
+    if (collectStatus) {
+      // 取消收藏
+      cancelCollectArt(index);
+    } else {
+      // 收藏
+      collectArt(index);
+    }
+  }
+
+  /// 取消收藏  这个返回都是一样看来是能把这两个整合起来减少代码量的，先这样吧，已经写了。
+  void cancelCollectArt(int index) {
+    var id = _articleData[index]["id"];
+    var url = Urls.ARTICLE_UN_COLLECT + "$id/json";
+    print(url);
+    HttpUtils.post(url).then((response) {
+//      print(response);
+      var suc = false;
+      if (response != null && response.isNotEmpty) {
+        Map<String, dynamic> resultMap = jsonDecode(response);
+        if (resultMap["errorCode"] == 0) {
+          setState(() {
+            _articleData[index]["collect"] = false;
+          });
+          suc = true;
+        }
+        Fluttertoast.showToast(
+            msg: suc ? "已取消收藏" : "${resultMap["errorMsg"]}",
+            gravity: ToastGravity.CENTER,
+            bgcolor: "#99000000",
+            textcolor: '#ffffff');
+//        _scaffoldState.currentState.showSnackBar(SnackBar(
+//            content: Text(
+//              suc ? "已取消收藏" : "${resultMap["errorMsg"]}",
+//            )));
+      }
+    });
+  }
+
+  /// 收藏
+  void collectArt(int index) {
+    var id = _articleData[index]["id"];
+    var url = Urls.ARTICLE_COLLECT_INNER + "$id/json";
+    print(url);
+    HttpUtils.post(url).then((response) {
+//      print(response);
+      var suc = false;
+      if (response != null && response.isNotEmpty) {
+        Map<String, dynamic> resultMap = jsonDecode(response);
+        if (resultMap["errorCode"] == 0) {
+          setState(() {
+            _articleData[index]["collect"] = true;
+          });
+          suc = true;
+        }
+        Fluttertoast.showToast(
+            msg: suc ? "收藏成功" : "${resultMap["errorMsg"]}",
+            gravity: ToastGravity.CENTER,
+            bgcolor: "#99000000",
+            textcolor: '#ffffff');
+//        _scaffoldState.currentState.showSnackBar(SnackBar(
+//            content: Text(
+//              suc ? "收藏成功" : "${resultMap["errorMsg"]}",
+//            )));
       }
     });
   }

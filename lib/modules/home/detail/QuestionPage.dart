@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
-import 'reply_page.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'ReplyPage.dart';
 
 class QuestionPage extends StatefulWidget {
   @override
   QuestionPageState createState() => new QuestionPageState();
-
 }
 
 class QuestionPageState extends State<QuestionPage> {
@@ -13,7 +12,7 @@ class QuestionPageState extends State<QuestionPage> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      theme: GlobalConfig.themeData,
+      theme: Config.themeData,
       home: new Scaffold(
         appBar: new AppBar(
             title: Common.searchInput(context)
@@ -25,39 +24,39 @@ class QuestionPageState extends State<QuestionPage> {
                 child: new Row(
                   children: <Widget>[
                     new Container(
-                      child: new FlatButton(onPressed: (){}, child: new Text("物理学"), color: GlobalConfig.searchBackgroundColor),
+                      child: new FlatButton(onPressed: (){}, child: new Text("物理学"), color: Config.searchBackgroundColor),
                       height: 30.0,
                       margin: const EdgeInsets.only(right: 8.0)
                     ),
                     new Container(
-                      child: new FlatButton(onPressed: (){}, child: new Text("三体(书籍)"), color: GlobalConfig.searchBackgroundColor),
+                      child: new FlatButton(onPressed: (){}, child: new Text("三体(书籍)"), color: Config.searchBackgroundColor),
                       height: 30.0,
                         margin: const EdgeInsets.only(right: 8.0)
                     ),
                     new Container(
-                      child: new FlatButton(onPressed: (){}, child: new Text("脑洞(网络用语)"), color: GlobalConfig.searchBackgroundColor),
+                      child: new FlatButton(onPressed: (){}, child: new Text("脑洞(网络用语)"), color: Config.searchBackgroundColor),
                       height: 30.0,
                     )
                   ],
                 ),
                 padding: new EdgeInsets.only(left: 16.0, top: 8.0, bottom: 8.0, right: 16.0),
-                color: GlobalConfig.cardBackgroundColor,
+                color: Config.cardBackgroundColor,
               ),
               new Container(
-                child: new Text("《三体》里的水滴有可能被制造出来吗?", style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, height: 1.3, color: GlobalConfig.dark == true ? Colors.white70 : Colors.black)),
+                child: new Text("《三体》里的水滴有可能被制造出来吗?", style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, height: 1.3, color: Config.dark == true ? Colors.white70 : Colors.black)),
                 padding: new EdgeInsets.only(left: 16.0, bottom: 8.0, right: 16.0),
                 alignment: Alignment.topLeft,
-                color: GlobalConfig.cardBackgroundColor
+                color: Config.cardBackgroundColor
               ),
               new Container(
                 child: new Text(
                     "如果，仅考虑其延长强相互作用力的特性，而不考虑其直角转弯的特性，那么水滴能被制造出来吗？换句话说，强相互作用力能够以影响微观物理量的方式延长吗？",
-                    style: new TextStyle(height: 1.4, fontSize: 16.0, color: GlobalConfig.fontColor), textAlign: TextAlign.start
+                    style: new TextStyle(height: 1.4, fontSize: 16.0, color: Config.fontColor), textAlign: TextAlign.start
                 ),
                 padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8.0),
                 decoration: new BoxDecoration(
-                  border: new BorderDirectional(bottom: new BorderSide(color: GlobalConfig.dark == true ?  Colors.white12 : Colors.black12)),
-                  color: GlobalConfig.cardBackgroundColor
+                  border: new BorderDirectional(bottom: new BorderSide(color: Config.dark == true ?  Colors.white12 : Colors.black12)),
+                  color: Config.cardBackgroundColor
                 ),
               ),
               new Container(
@@ -73,7 +72,7 @@ class QuestionPageState extends State<QuestionPage> {
                             textTheme: ButtonTextTheme.accent,
                           ),
                           decoration: new BoxDecoration(
-                              border: new BorderDirectional(end: new BorderSide(color: GlobalConfig.dark == true ?  Colors.white12 : Colors.black12))
+                              border: new BorderDirectional(end: new BorderSide(color: Config.dark == true ?  Colors.white12 : Colors.black12))
                           ),
                         ),
                       ),
@@ -87,14 +86,14 @@ class QuestionPageState extends State<QuestionPage> {
                             textTheme: ButtonTextTheme.accent,
                           ),
                           decoration: new BoxDecoration(
-                              border: new BorderDirectional(end: new BorderSide(color: GlobalConfig.dark == true ?  Colors.white12 : Colors.black12))
+                              border: new BorderDirectional(end: new BorderSide(color: Config.dark == true ?  Colors.white12 : Colors.black12))
                           ),
                         ),
                       ),
                     ],
                   ),
                   decoration: new BoxDecoration(
-                    color: GlobalConfig.cardBackgroundColor
+                    color: Config.cardBackgroundColor
                   ),
               ),
               new Container(
@@ -103,7 +102,7 @@ class QuestionPageState extends State<QuestionPage> {
                   children: <Widget>[
                     new Expanded(
                       child: new Container(
-                        child: new Text("173个回答", style: new TextStyle(color: GlobalConfig.fontColor)),
+                        child: new Text("173个回答", style: new TextStyle(color: Config.fontColor)),
                         margin: const EdgeInsets.only(left: 16.0),
                       ),
                     ),
@@ -131,8 +130,8 @@ class QuestionPageState extends State<QuestionPage> {
                             child: new Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: <Widget>[
-                                new Text("按质量排序", style: new TextStyle(color: GlobalConfig.fontColor)),
-                                new Icon(Icons.keyboard_arrow_down, color: GlobalConfig.fontColor)
+                                new Text("按质量排序", style: new TextStyle(color: Config.fontColor)),
+                                new Icon(Icons.keyboard_arrow_down, color: Config.fontColor)
                               ],
                             ),
                           ),
@@ -144,7 +143,7 @@ class QuestionPageState extends State<QuestionPage> {
                 ),
               ),
               new Container(
-                color: GlobalConfig.cardBackgroundColor,
+                color: Config.cardBackgroundColor,
                 margin: const EdgeInsets.only(bottom: 5.0),
                 child: new FlatButton(
                   onPressed: (){
@@ -165,7 +164,7 @@ class QuestionPageState extends State<QuestionPage> {
                                   radius: 11.0
                               ),
                             ),
-                            new Text(" 游牧由", style: new TextStyle(color: GlobalConfig.fontColor))
+                            new Text(" 游牧由", style: new TextStyle(color: Config.fontColor))
                           ],
                         ),
                         padding: const EdgeInsets.only(top: 10.0),
@@ -173,7 +172,7 @@ class QuestionPageState extends State<QuestionPage> {
                       new Container(
                           child: new Text(
                               "第一，几年前我跟一个985211级别大学的物理类学科教授聊过这个问题。他很严肃的表示，使用强互作用力为工具在原子角度加工出这种水平的材料，对人类目前的物理...",
-                              style: new TextStyle(height: 1.3, color: GlobalConfig.fontColor)
+                              style: new TextStyle(height: 1.3, color: Config.fontColor)
                           ),
                           margin: new EdgeInsets.only(top: 6.0, bottom: 14.0),
                           alignment: Alignment.topLeft
@@ -182,7 +181,7 @@ class QuestionPageState extends State<QuestionPage> {
                         child: new Row(
                           children: <Widget>[
                             new Expanded(
-                                child: new Text("1K 赞同 · 262 评论 · 10 天前", style: new TextStyle(color: GlobalConfig.fontColor))
+                                child: new Text("1K 赞同 · 262 评论 · 10 天前", style: new TextStyle(color: Config.fontColor))
                             )
                           ],
                         ),

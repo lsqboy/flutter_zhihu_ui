@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
-import 'package:flutter_zhifu_ui/modules/home/follow/follow.dart';
-import 'package:flutter_zhifu_ui/modules/home/hot/hot.dart';
-import 'package:flutter_zhifu_ui/modules/home/recommend/recommend.dart';
-import 'package:flutter_zhifu_ui/modules/home/search/search_page.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/modules/home/follow/FollowPage.dart';
+import 'package:flutter_zhifu_ui/modules/home/hot/HotPage.dart';
+import 'package:flutter_zhifu_ui/modules/home/recommend/RecommendPage.dart';
+import 'package:flutter_zhifu_ui/modules/home/search/SearchPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -28,18 +28,18 @@ class _HomePage extends State<HomePage> {
                     },
                     icon: new Icon(
                       Icons.search,
-                      color: GlobalConfig.fontColor,
+                      color: Config.fontColor,
                       size: 16.0,
                     ),
                     label: new Text(
                       "坚果R1摄像头损坏",
-                      style: new TextStyle(color: GlobalConfig.fontColor),
+                      style: new TextStyle(color: Config.fontColor),
                     ))),
             new Container(
               decoration: new BoxDecoration(
                   border: new BorderDirectional(
                       start: new BorderSide(
-                          color: GlobalConfig.fontColor, width: 1.0))),
+                          color: Config.fontColor, width: 1.0))),
               height: 14.0,
               width: 1.0,
             ),
@@ -52,19 +52,19 @@ class _HomePage extends State<HomePage> {
                   },
                   icon: new Icon(
                     Icons.border_color,
-                    color: GlobalConfig.fontColor,
+                    color: Config.fontColor,
                     size: 14.0,
                   ),
                   label: new Text(
                     "提问",
-                    style: new TextStyle(color: GlobalConfig.fontColor),
+                    style: new TextStyle(color: Config.fontColor),
                   )),
             ),
           ],
         ),
         decoration: new BoxDecoration(
             borderRadius: const BorderRadius.all(const Radius.circular(4.0)),
-            color: GlobalConfig.searchBackgroundColor),
+            color: Config.searchBackgroundColor),
       );
     }
 
@@ -84,9 +84,9 @@ class _HomePage extends State<HomePage> {
             ),
           ),
           body: new TabBarView(children: [
-            new Follow(),
-            new Recommend(),
-            new Hot(),
+            new FollowPage(),
+            new RecommendPage(),
+            new HotPage(),
           ]),
         ));
   }

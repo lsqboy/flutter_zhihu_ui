@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter_zhifu_ui/constant/AppConstant.dart';
-import 'package:flutter_zhifu_ui/constant/global_config.dart';
+import 'package:flutter_zhifu_ui/constant/Config.dart';
 import 'package:flutter_zhifu_ui/utils/SpUtils.dart';
 import 'package:http/http.dart' as http;
 
@@ -47,7 +47,7 @@ class HttpUtils {
       // 内容中放一份加快取的速度
       AppConstant.APP_COOKIE = cookie;
       // 持久化一份
-      SpUtils.setString(GlobalConfig.SP_COOKIE, cookie);
+      SpUtils.setString(Config.SP_COOKIE, cookie);
     }
 
     return response.body;
