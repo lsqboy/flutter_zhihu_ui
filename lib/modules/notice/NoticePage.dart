@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zhifu_ui/constant/Strings.dart';
 
 class NoticePage extends StatefulWidget{
   @override
@@ -13,7 +14,7 @@ class _NoticePage extends State<NoticePage> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text('通知'),
+        title: new Text(Strings.INDEX_NAV_NOTICE),
       ),
       body: new Center(
         child: new Text('通知页面'),

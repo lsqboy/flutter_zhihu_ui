@@ -8,10 +8,10 @@ void main() {
   SharedPreferences.getInstance().then((prefs) {
     AppConstant.APP_COOKIE = prefs.getString(Config.SP_COOKIE);
   });
-  runApp(new ZhiHu());
+  runApp(new Main());
 }
 
-class ZhiHu extends StatelessWidget {
+class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

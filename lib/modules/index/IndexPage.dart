@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/constant/Strings.dart';
 import 'package:flutter_zhifu_ui/modules/article/ArticlePage.dart';
 import 'package:flutter_zhifu_ui/modules/home/HomePage.dart';
 import 'package:flutter_zhifu_ui/modules/index/NavigationIconView.dart';
@@ -24,22 +25,22 @@ class _IndexPageState extends State<IndexPage> with TickerProviderStateMixin {
   void initState() {
     _navigationViews = <NavigationIconView>[
       new NavigationIconView(
-          icon: new Icon(Icons.home), title: new Text('首页'), vsync: this),
+          icon: new Icon(Icons.home), title: new Text(Strings.INDEX_NAV_HOME), vsync: this),
       new NavigationIconView(
           icon: new Icon(Icons.bookmark),
-          title: new Text('玩资讯'),
+          title: new Text(Strings.INDEX_NAV_ARTICLE),
           vsync: this),
       new NavigationIconView(
           icon: new Icon(Icons.book),
-          title: new Text('知识体系'),
+          title: new Text(Strings.INDEX_NAV_KNOWLEDGE),
           vsync: this),
       new NavigationIconView(
           icon: new Icon(Icons.notifications),
-          title: new Text('通知'),
+          title: new Text(Strings.INDEX_NAV_NOTICE),
           vsync: this),
       new NavigationIconView(
           icon: new Icon(Icons.person),
-          title: new Text('我的'),
+          title: new Text(Strings.INDEX_NAV_MINE),
           vsync: this)
     ];
 

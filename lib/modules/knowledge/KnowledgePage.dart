@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_zhifu_ui/constant/Strings.dart';
 import 'package:flutter_zhifu_ui/constant/Urls.dart';
 import 'package:flutter_zhifu_ui/event/EventObject.dart';
 import 'package:flutter_zhifu_ui/event/EventUtils.dart';
@@ -53,7 +54,7 @@ class _KnowledgePage extends State<KnowledgePage> with AutomaticKeepAliveClientM
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text("知识体系"),
+        title: new Text(Strings.INDEX_NAV_KNOWLEDGE),
       ),
       body: _treeData.length == 0
           ? new Center(

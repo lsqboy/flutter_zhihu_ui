@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:banner_view/banner_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_zhifu_ui/constant/Strings.dart';
 import 'package:flutter_zhifu_ui/constant/Urls.dart';
 import 'package:flutter_zhifu_ui/event/EventObject.dart';
 import 'package:flutter_zhifu_ui/event/EventUtils.dart';
@@ -88,7 +89,7 @@ class _ArticlePage extends State<ArticlePage> with AutomaticKeepAliveClientMixin
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text('玩资讯'),
+        title: new Text(Strings.INDEX_NAV_ARTICLE),
       ),
       key: _scaffoldState,
       body: _articleData.length == 0

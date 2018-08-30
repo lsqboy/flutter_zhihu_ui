@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zhifu_ui/constant/Config.dart';
+import 'package:flutter_zhifu_ui/constant/Strings.dart';
 import 'package:flutter_zhifu_ui/modules/home/follow/FollowPage.dart';
 import 'package:flutter_zhifu_ui/modules/home/hot/HotPage.dart';
 import 'package:flutter_zhifu_ui/modules/home/recommend/RecommendPage.dart';
@@ -46,9 +47,9 @@ class _HomePage extends State<HomePage> {
             new Container(
               child: new FlatButton.icon(
                   onPressed: (){
-                    Navigator.of(context).push(new MaterialPageRoute(builder: (context){
-                      return new SearchPage();
-                    }));
+//                    Navigator.of(context).push(new MaterialPageRoute(builder: (context){
+//                      return new SearchPage();
+//                    }));
                   },
                   icon: new Icon(
                     Icons.border_color,
@@ -75,9 +76,9 @@ class _HomePage extends State<HomePage> {
             title: barSearch(),
             bottom: new TabBar(
               tabs: [
-                new Tab(text: '关注'),
-                new Tab(text: '推荐'),
-                new Tab(text: '热榜'),
+                new Tab(text: Strings.HOME_NAV_FOLLOW),
+                new Tab(text: Strings.HOME_NAV_RECOMMEND),
+                new Tab(text: Strings.HOME_NAV_HOT),
               ],
               labelColor: Colors.white,
               unselectedLabelColor: Colors.white70,
