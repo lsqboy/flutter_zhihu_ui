@@ -9,8 +9,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   shared_preferences: ^0.4.2
-  cached_network_image: ^0.4.1
-  fluttertoast: ^2.0.7
+  cached_network_image: ^0.5.1
+  fluttertoast: ^2.2.6
   event_bus: ^1.0.1
   flutter_webview_plugin: ^0.2.1+2
   banner_view: "^1.1.2"

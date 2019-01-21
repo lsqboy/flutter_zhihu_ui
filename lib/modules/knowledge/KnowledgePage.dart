@@ -145,9 +145,7 @@ class _KnowledgePage extends State<KnowledgePage> with AutomaticKeepAliveClientM
           // 弹出提示
           Fluttertoast.showToast(
               msg: "${resultMap["errorMsg"]}",
-              gravity: ToastGravity.CENTER,
-              bgcolor: "#99000000",
-              textcolor: '#ffffff');
+              gravity: ToastGravity.CENTER);
         }
       }
     });

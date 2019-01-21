@@ -295,8 +295,8 @@ class _ArticlePage extends State<ArticlePage> with AutomaticKeepAliveClientMixin
           Fluttertoast.showToast(
               msg: "${resultMap["errorMsg"]}",
               gravity: ToastGravity.CENTER,
-              bgcolor: "#99000000",
-              textcolor: '#ffffff');
+              backgroundColor: Colors.red,
+              textColor: Colors.white);
         }
       }
     });

@@ -230,9 +230,7 @@ class KnowledgeChildListPageState extends State<KnowledgeChildListPage>
           // 弹出提示
           Fluttertoast.showToast(
               msg: "${resultMap["errorMsg"]}",
-              gravity: ToastGravity.CENTER,
-              bgcolor: "#99000000",
-              textcolor: '#ffffff');
+              gravity: ToastGravity.CENTER);
         }
       }
     });
@@ -267,9 +265,7 @@ class KnowledgeChildListPageState extends State<KnowledgeChildListPage>
         }
         Fluttertoast.showToast(
             msg: suc ? "已取消收藏" : "${resultMap["errorMsg"]}",
-            gravity: ToastGravity.CENTER,
-            bgcolor: "#99000000",
-            textcolor: '#ffffff');
+            gravity: ToastGravity.CENTER);
 //        _scaffoldState.currentState.showSnackBar(SnackBar(
 //            content: Text(
 //              suc ? "已取消收藏" : "${resultMap["errorMsg"]}",
@@ -296,9 +292,7 @@ class KnowledgeChildListPageState extends State<KnowledgeChildListPage>
         }
         Fluttertoast.showToast(
             msg: suc ? "收藏成功" : "${resultMap["errorMsg"]}",
-            gravity: ToastGravity.CENTER,
-            bgcolor: "#99000000",
-            textcolor: '#ffffff');
+            gravity: ToastGravity.CENTER);
 //        _scaffoldState.currentState.showSnackBar(SnackBar(
 //            content: Text(
 //              suc ? "收藏成功" : "${resultMap["errorMsg"]}",
